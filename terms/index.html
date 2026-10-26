@@ -9,19 +9,19 @@
   :root { --bg:#EEF5F7; --card:#FFFFFF; --text:#0F2A33; --muted:#557079; --accent:#0E7C93; }
   @media (prefers-color-scheme: dark) { :root { --bg:#0A1A1F; --card:#12262C; --text:#E2F0F3; --muted:#9DB6BD; --accent:#5CC6DB; } }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 48px; }
-  section { background:var(--card); border-radius:16px; padding:8px 24px 16px; margin-top:20px; }
-  h1 { font-size:28px; margin:0; } h2 { font-size:20px; color:var(--accent); } h3 { font-size:16px; margin-bottom:4px; }
+  main { max-width:760px; margin:0 auto; padding:16px 16px 48px; }
+  .bar { display:flex; justify-content:center; align-items:center; gap:8px; margin-top:24px; }
+  .bar select { font:inherit; font-size:14px; padding:6px 10px; border-radius:10px; border:1px solid var(--muted); background:var(--card); color:var(--text); }
+  section { background:var(--card); border-radius:16px; padding:8px 24px 16px; margin-top:16px; }
+  h1 { font-size:26px; line-height:1.3; margin:16px 0 4px; } h3 { font-size:16px; margin-bottom:4px; }
   .muted { color:var(--muted); font-size:14px; } a { color:var(--accent); }
 </style>
 </head>
 <body>
 <main>
-  <h1>Sippet – Terms of Use</h1>
-  <p class="muted">Effective date: 2026-10-26 · Developer: DinhTruong · Contact: ndsoftwr@gmail.com · <a href="../privacy/">Privacy Policy</a></p>
-
-  <section lang="en">
-    <h2>English</h2>
+  <section lang="en" data-title="Sippet – Terms of Use">
+    <h1>Sippet – Terms of Use</h1>
+    <p class="muted">Effective date: 2026-10-26 · Developer: DinhTruong · Contact: ndsoftwr@gmail.com · <a href="../privacy/">Privacy Policy</a></p>
     <p>These terms apply when you download or use Sippet (“the app”), made by DinhTruong (“we”). By using the app you agree to them. If you don't agree, please don't use the app.</p>
     <h3>1. What Sippet is</h3>
     <p>Sippet helps you log what you drink and reminds you to drink water. The core app is free. We may update, change or stop parts of the app over time.</p>
@@ -60,8 +60,10 @@
     <p>Questions about these terms: ndsoftwr@gmail.com.</p>
   </section>
 
-  <section lang="vi">
-    <h2>Tiếng Việt</h2>
+  <section lang="vi" data-title="Sippet – Điều khoản sử dụng">
+    <h1>Sippet – Điều khoản sử dụng</h1>
+    <p class="muted">Ngày hiệu lực: 2026-10-26 · Nhà phát triển: DinhTruong · Liên hệ: ndsoftwr@gmail.com · <a href="../privacy/">Chính sách quyền riêng tư</a></p>
+    <p class="muted">Bản dịch này để tham khảo. Nếu có khác biệt, bản tiếng Anh được ưu tiên áp dụng.</p>
     <p>Điều khoản này áp dụng khi bạn tải hoặc dùng Sippet (“ứng dụng”) do DinhTruong (“chúng tôi”) phát triển. Khi dùng ứng dụng, bạn đồng ý với các điều khoản này. Nếu không đồng ý, vui lòng không dùng ứng dụng.</p>
     <h3>1. Sippet là gì</h3>
     <p>Sippet giúp bạn ghi lại những gì đã uống và nhắc bạn uống nước. Các tính năng chính của ứng dụng là miễn phí. Chúng tôi có thể cập nhật, thay đổi hoặc ngừng một phần ứng dụng theo thời gian.</p>
@@ -99,6 +101,248 @@
     <h3>13. Liên hệ</h3>
     <p>Câu hỏi về điều khoản: ndsoftwr@gmail.com.</p>
   </section>
+
+  <section lang="zh-CN" data-title="Sippet – 使用条款">
+    <h1>Sippet – 使用条款</h1>
+    <p class="muted">生效日期：2026-10-26 · 开发者：DinhTruong · 联系方式：ndsoftwr@gmail.com · <a href="../privacy/">隐私政策</a></p>
+    <p class="muted">本译文仅供参考。如有出入，以英文版本为准。</p>
+    <p>当你下载或使用由 DinhTruong（“我们”）开发的 Sippet（“本应用”）时，适用本条款。使用本应用即表示你同意本条款。如果你不同意，请不要使用本应用。</p>
+    <h3>1. Sippet 是什么</h3>
+    <p>Sippet 帮助你记录喝了什么，并提醒你喝水。本应用的核心功能免费。我们可能会不时更新、更改或停止本应用的部分功能。</p>
+    <h3>2. 非医疗建议</h3>
+    <p>Sippet 是一款习惯记录工具，不是医疗器械或医疗应用。目标、提醒、统计和建议均为一般信息，不构成医疗建议。你需要喝多少水取决于你的健康状况、活动量和气候。如果你患有疾病（例如肾病或心脏病），或医生要求你限制饮水量，请遵从医生的建议，而不是本应用。</p>
+    <h3>3. Sippet Premium</h3>
+    <p>Sippet Premium 为可选项目。目前它可以去除广告，并增加 30 天统计、配色主题、“我的杯子”和 CSV 导出。应用的其他所有功能仍然免费。</p>
+    <ul>
+      <li><strong>付款。</strong>Premium 通过 Google Play 销售。Google Play 按照其自身条款处理付款，应用内显示的价格来自 Google Play，并在适用情况下包含当地税费。</li>
+      <li><strong>一次性购买（终身）。</strong>你只需付款一次，只要本应用仍在 Google Play 上提供，你就可以在购买时使用的 Google 账号上一直保留 Premium。</li>
+      <li><strong>年度订阅。</strong>订阅每年自动续订，在你取消之前，每年年初都会扣费。你可以随时在 Google Play → 付款和订阅 → 订阅 中取消。取消后，Premium 会保留到你已付费年度结束。卸载应用不会取消订阅。</li>
+      <li><strong>价格变更。</strong>如果订阅价格发生变化，Google Play 会提前通知你，并在法律要求时，在按新价格扣费前征得你的同意。</li>
+      <li><strong>退款。</strong>退款由 Google Play 按照 <a href="https://support.google.com/googleplay/answer/2479637?hl=zh-Hans">Google Play 退款政策</a> 处理。本条款不限制你根据所在国家/地区法律享有的退款或撤销权利。</li>
+      <li><strong>恢复。</strong>如果你重新安装应用或更换手机，请登录同一个 Google 账号，并在 Premium 页面点按“恢复购买”。</li>
+      <li><strong>Premium 的变更。</strong>我们可能会改进或更改 Premium 功能。当前功能始终在应用内的 Premium 页面中说明。</li>
+    </ul>
+    <h3>4. 广告</h3>
+    <p>未购买 Premium 时，本应用会显示来自 Google AdMob 的横幅广告。广告由第三方提供；我们不对其宣传的产品或网站负责。广告数据的处理方式请参阅<a href="../privacy/">隐私政策</a>。</p>
+    <h3>5. 你的数据</h3>
+    <p>你的饮水记录和设置保存在你的设备上。如果这些数据对你很重要，你需要自行保留副本（例如使用 CSV 导出或 Android 备份）；卸载应用或丢失手机后，未备份的数据将会丢失。详情请参阅<a href="../privacy/">隐私政策</a>。</p>
+    <h3>6. 合理使用</h3>
+    <p>请勿滥用本应用：不要试图不付费获取 Premium、绕过其功能或限制，也不要在法律允许范围之外复制、修改、转售或再分发本应用。</p>
+    <h3>7. 所有权</h3>
+    <p>本应用及其名称、设计和内容归 DinhTruong 所有。本条款授予你在自己的设备上使用本应用的个人、不可转让的权利，但不会向你转让任何所有权。</p>
+    <h3>8. 不提供担保</h3>
+    <p>我们努力保持 Sippet 稳定可靠，但本应用按“现状”提供。我们不承诺本应用始终可用、没有错误，或提醒总能准时送达（Android 可能会延迟或阻止提醒，例如在省电模式下）。</p>
+    <h3>9. 责任限制</h3>
+    <p>在法律允许的范围内，对于因使用本应用而产生的间接或后果性损失或数据丢失，我们不承担责任。如果我们被认定须承担责任，我们的总责任以你在索赔前 12 个月内为 Premium 支付的金额为限。本条款不排除法律规定不得排除的责任，也不限制你作为消费者享有的权利。</p>
+    <h3>10. 终止</h3>
+    <p>你可以随时通过卸载本应用停止使用（请记得另行在 Google Play 中取消订阅）。我们可能停止提供本应用；如果这样做，有效的年度订阅将在 Google Play 中取消，你不会再被扣费。</p>
+    <h3>11. 条款变更</h3>
+    <p>我们可能会更新本条款。新版本将在本页面发布，并注明新的生效日期。如果你此后继续使用本应用，即适用新条款。</p>
+    <h3>12. 适用法律</h3>
+    <p>本条款受越南法律管辖，但不剥夺你所在国家/地区强制性法律给予你的保护。</p>
+    <h3>13. 联系方式</h3>
+    <p>有关本条款的问题：ndsoftwr@gmail.com。</p>
+  </section>
+
+  <section lang="es" data-title="Sippet – Términos de uso">
+    <h1>Sippet – Términos de uso</h1>
+    <p class="muted">Fecha de entrada en vigor: 2026-10-26 · Desarrollador: DinhTruong · Contacto: ndsoftwr@gmail.com · <a href="../privacy/">Política de privacidad</a></p>
+    <p class="muted">Esta traducción es solo de referencia. En caso de diferencias, prevalece la versión en inglés.</p>
+    <p>Estos términos se aplican cuando descargas o usas Sippet («la app»), creada por DinhTruong («nosotros»). Al usar la app, los aceptas. Si no estás de acuerdo, no uses la app.</p>
+    <h3>1. Qué es Sippet</h3>
+    <p>Sippet te ayuda a registrar lo que bebes y te recuerda beber agua. Las funciones principales de la app son gratuitas. Podemos actualizar, cambiar o dejar de ofrecer partes de la app con el tiempo.</p>
+    <h3>2. No es consejo médico</h3>
+    <p>Sippet es una app para seguir hábitos, no un dispositivo ni una app médica. Los objetivos, recordatorios, estadísticas y sugerencias son información general, no consejo médico. La cantidad de agua que necesitas depende de tu salud, tu actividad y el clima. Si tienes una enfermedad (por ejemplo, renal o cardíaca) o tu médico te ha indicado que limites los líquidos, sigue el consejo de tu médico y no el de la app.</p>
+    <h3>3. Sippet Premium</h3>
+    <p>Sippet Premium es opcional. Actualmente elimina los anuncios y añade estadísticas de 30 días, temas de color, «Mis vasos» y exportación a CSV. Todo lo demás de la app sigue siendo gratis.</p>
+    <ul>
+      <li><strong>Pago.</strong> Premium se vende a través de Google Play. Google Play gestiona el pago según sus propias condiciones, y el precio que se muestra en la app procede de Google Play, con los impuestos locales incluidos cuando corresponda.</li>
+      <li><strong>Compra única (de por vida).</strong> Pagas una vez y conservas Premium en la cuenta de Google con la que lo compraste mientras la app se ofrezca en Google Play.</li>
+      <li><strong>Suscripción anual.</strong> Se renueva automáticamente cada año y se te cobra al inicio de cada año hasta que la canceles. Puedes cancelarla cuando quieras en Google Play → Pagos y suscripciones → Suscripciones. Tras cancelarla, Premium sigue activo hasta el final del año que ya pagaste. Desinstalar la app no cancela la suscripción.</li>
+      <li><strong>Cambios de precio.</strong> Si cambia el precio de la suscripción, Google Play te avisará con antelación y, cuando sea necesario, te pedirá tu consentimiento antes de cobrarte el nuevo precio.</li>
+      <li><strong>Reembolsos.</strong> Los reembolsos los gestiona Google Play según la <a href="https://support.google.com/googleplay/answer/2479637?hl=es">política de reembolsos de Google Play</a>. Nada de lo dispuesto en estos términos limita los derechos de reembolso o desistimiento que te otorgue la ley de tu país.</li>
+      <li><strong>Restaurar.</strong> Si reinstalas la app o cambias de teléfono, inicia sesión con la misma cuenta de Google y toca «Restaurar compras» en la pantalla Premium.</li>
+      <li><strong>Cambios en Premium.</strong> Podemos mejorar o cambiar las funciones Premium. Las funciones actuales siempre se describen en la pantalla Premium de la app.</li>
+    </ul>
+    <h3>4. Anuncios</h3>
+    <p>Sin Premium, la app muestra un anuncio de banner de Google AdMob. Los anuncios los proporcionan terceros; no somos responsables de los productos o sitios web que anuncian. Cómo se tratan los datos de los anuncios se explica en la <a href="../privacy/">Política de privacidad</a>.</p>
+    <h3>5. Tus datos</h3>
+    <p>Tus bebidas y ajustes se guardan en tu dispositivo. Si te importan, eres responsable de guardar una copia (por ejemplo, con la exportación a CSV o la copia de seguridad de Android); si desinstalas la app o pierdes el teléfono, los datos sin copia de seguridad se pierden. Consulta la <a href="../privacy/">Política de privacidad</a> para más detalles.</p>
+    <h3>6. Uso adecuado</h3>
+    <p>No hagas un mal uso de la app: no intentes obtener Premium sin pagar, eludir sus funciones o límites, ni copiar, modificar, revender o redistribuir la app salvo en la medida en que la ley lo permita.</p>
+    <h3>7. Propiedad</h3>
+    <p>La app, su nombre, su diseño y su contenido pertenecen a DinhTruong. Estos términos te otorgan un derecho personal e intransferible a usar la app en tus propios dispositivos; no te transfieren ninguna propiedad.</p>
+    <h3>8. Sin garantía</h3>
+    <p>Trabajamos para que Sippet sea fiable, pero la app se ofrece «tal cual». No garantizamos que esté siempre disponible, que no tenga errores ni que los recordatorios lleguen siempre a tiempo (Android puede retrasarlos o bloquearlos, por ejemplo en el modo de ahorro de batería).</p>
+    <h3>9. Limitación de responsabilidad</h3>
+    <p>En la medida en que la ley lo permita, no somos responsables de pérdidas indirectas o derivadas, ni de la pérdida de datos, que resulten del uso de la app. Si se determina que somos responsables, nuestra responsabilidad total se limita al importe que pagaste por Premium en los 12 meses anteriores a la reclamación. Nada de lo dispuesto en estos términos excluye la responsabilidad que la ley no permite excluir ni limita tus derechos como consumidor.</p>
+    <h3>10. Finalización</h3>
+    <p>Puedes dejar de usar la app en cualquier momento desinstalándola (recuerda cancelar la suscripción en Google Play por separado). Podemos dejar de ofrecer la app; si lo hacemos, la suscripción anual activa se cancelará en Google Play para que no se te vuelva a cobrar.</p>
+    <h3>11. Cambios en estos términos</h3>
+    <p>Podemos actualizar estos términos. La nueva versión se publicará en esta página con una nueva fecha de entrada en vigor. Si sigues usando la app después, se aplicarán los nuevos términos.</p>
+    <h3>12. Ley aplicable</h3>
+    <p>Estos términos se rigen por las leyes de Vietnam, sin privarte de la protección que te otorgan las leyes imperativas del país en el que vives.</p>
+    <h3>13. Contacto</h3>
+    <p>Preguntas sobre estos términos: ndsoftwr@gmail.com.</p>
+  </section>
+
+  <section lang="pt" data-title="Sippet – Termos de utilização">
+    <h1>Sippet – Termos de utilização</h1>
+    <p class="muted">Data de entrada em vigor: 2026-10-26 · Programador: DinhTruong · Contacto: ndsoftwr@gmail.com · <a href="../privacy/">Política de privacidade</a></p>
+    <p class="muted">Esta tradução serve apenas de referência. Em caso de diferenças, prevalece a versão em inglês.</p>
+    <p>Estes termos aplicam-se quando transfere ou utiliza o Sippet («a app»), criado por DinhTruong («nós»). Ao utilizar a app, aceita estes termos. Se não concordar, não utilize a app.</p>
+    <h3>1. O que é o Sippet</h3>
+    <p>O Sippet ajuda-o a registar o que bebe e lembra-o de beber água. As funcionalidades principais da app são gratuitas. Podemos atualizar, alterar ou descontinuar partes da app ao longo do tempo.</p>
+    <h3>2. Não é aconselhamento médico</h3>
+    <p>O Sippet é uma app de acompanhamento de hábitos, não um dispositivo médico nem uma app médica. Os objetivos, lembretes, estatísticas e sugestões são informação geral, não aconselhamento médico. A quantidade de água de que precisa depende da sua saúde, atividade e clima. Se tiver uma doença (por exemplo, renal ou cardíaca) ou se o seu médico lhe tiver indicado que limite os líquidos, siga o conselho do seu médico e não o da app.</p>
+    <h3>3. Sippet Premium</h3>
+    <p>O Sippet Premium é opcional. Atualmente remove os anúncios e acrescenta estatísticas de 30 dias, temas de cor, «Os meus copos» e exportação para CSV. Tudo o resto na app continua gratuito.</p>
+    <ul>
+      <li><strong>Pagamento.</strong> O Premium é vendido através do Google Play. O Google Play trata do pagamento nos seus próprios termos, e o preço apresentado na app provém do Google Play, incluindo os impostos locais quando aplicável.</li>
+      <li><strong>Compra única (vitalícia).</strong> Paga uma vez e mantém o Premium na conta Google com que o comprou, enquanto a app for disponibilizada no Google Play.</li>
+      <li><strong>Subscrição anual.</strong> É renovada automaticamente todos os anos e é cobrada no início de cada ano até a cancelar. Pode cancelá-la a qualquer momento em Google Play → Pagamentos e subscrições → Subscrições. Após o cancelamento, o Premium mantém-se ativo até ao fim do ano já pago. Desinstalar a app não cancela a subscrição.</li>
+      <li><strong>Alterações de preço.</strong> Se o preço da subscrição mudar, o Google Play informa-o com antecedência e, quando exigido, pede o seu consentimento antes de cobrar o novo preço.</li>
+      <li><strong>Reembolsos.</strong> Os reembolsos são tratados pelo Google Play de acordo com a <a href="https://support.google.com/googleplay/answer/2479637?hl=pt-PT">política de reembolsos do Google Play</a>. Nada nestes termos limita os direitos de reembolso ou de livre resolução que a lei do seu país lhe confere.</li>
+      <li><strong>Restaurar.</strong> Se reinstalar a app ou mudar de telemóvel, inicie sessão com a mesma conta Google e toque em «Restaurar compras» no ecrã Premium.</li>
+      <li><strong>Alterações ao Premium.</strong> Podemos melhorar ou alterar as funcionalidades Premium. As funcionalidades atuais estão sempre descritas no ecrã Premium da app.</li>
+    </ul>
+    <h3>4. Anúncios</h3>
+    <p>Sem o Premium, a app mostra um anúncio de banner do Google AdMob. Os anúncios são fornecidos por terceiros; não somos responsáveis pelos produtos ou sites que anunciam. A forma como os dados dos anúncios são tratados é explicada na <a href="../privacy/">Política de privacidade</a>.</p>
+    <h3>5. Os seus dados</h3>
+    <p>As suas bebidas e definições são guardadas no seu dispositivo. Se forem importantes para si, é responsável por guardar uma cópia (por exemplo, com a exportação para CSV ou a cópia de segurança do Android); se desinstalar a app ou perder o telemóvel, os dados sem cópia de segurança perdem-se. Consulte a <a href="../privacy/">Política de privacidade</a> para mais detalhes.</p>
+    <h3>6. Utilização adequada</h3>
+    <p>Não utilize a app de forma abusiva: não tente obter o Premium sem pagar, contornar as suas funcionalidades ou limites, nem copiar, modificar, revender ou redistribuir a app, exceto na medida permitida por lei.</p>
+    <h3>7. Propriedade</h3>
+    <p>A app, o seu nome, design e conteúdo pertencem a DinhTruong. Estes termos concedem-lhe um direito pessoal e intransmissível de utilizar a app nos seus próprios dispositivos; não lhe transferem qualquer propriedade.</p>
+    <h3>8. Sem garantia</h3>
+    <p>Esforçamo-nos por manter o Sippet fiável, mas a app é fornecida «tal como está». Não garantimos que esteja sempre disponível, sem erros, nem que os lembretes cheguem sempre a horas (o Android pode atrasá-los ou bloqueá-los, por exemplo no modo de poupança de bateria).</p>
+    <h3>9. Limitação de responsabilidade</h3>
+    <p>Na medida permitida por lei, não somos responsáveis por perdas indiretas ou consequenciais, nem pela perda de dados, resultantes da utilização da app. Se formos considerados responsáveis, a nossa responsabilidade total limita-se ao montante que pagou pelo Premium nos 12 meses anteriores à reclamação. Nada nestes termos exclui a responsabilidade que a lei não permite excluir, nem limita os seus direitos enquanto consumidor.</p>
+    <h3>10. Cessação</h3>
+    <p>Pode deixar de utilizar a app a qualquer momento desinstalando-a (lembre-se de cancelar a subscrição no Google Play separadamente). Podemos deixar de disponibilizar a app; se o fizermos, a subscrição anual ativa será cancelada no Google Play para que não volte a ser cobrado.</p>
+    <h3>11. Alterações a estes termos</h3>
+    <p>Podemos atualizar estes termos. A nova versão será publicada nesta página com uma nova data de entrada em vigor. Se continuar a utilizar a app depois disso, aplicam-se os novos termos.</p>
+    <h3>12. Lei aplicável</h3>
+    <p>Estes termos regem-se pelas leis do Vietname, sem o privar da proteção que lhe é conferida pelas leis imperativas do país onde vive.</p>
+    <h3>13. Contacto</h3>
+    <p>Questões sobre estes termos: ndsoftwr@gmail.com.</p>
+  </section>
+
+  <section lang="ko" data-title="Sippet – 이용약관">
+    <h1>Sippet – 이용약관</h1>
+    <p class="muted">시행일: 2026-10-26 · 개발자: DinhTruong · 문의: ndsoftwr@gmail.com · <a href="../privacy/">개인정보처리방침</a></p>
+    <p class="muted">이 번역본은 참고용입니다. 내용이 다를 경우 영어 원문이 우선합니다.</p>
+    <p>이 약관은 DinhTruong('당사')이 만든 Sippet('앱')을 다운로드하거나 사용할 때 적용됩니다. 앱을 사용하면 이 약관에 동의하는 것으로 간주됩니다. 동의하지 않는 경우 앱을 사용하지 마세요.</p>
+    <h3>1. Sippet 소개</h3>
+    <p>Sippet은 마신 음료를 기록하고 물 마실 때를 알려 주는 앱입니다. 앱의 핵심 기능은 무료입니다. 당사는 앱의 일부를 수시로 업데이트, 변경 또는 중단할 수 있습니다.</p>
+    <h3>2. 의학적 조언이 아님</h3>
+    <p>Sippet은 습관 기록 앱이며 의료기기나 의료 앱이 아닙니다. 목표, 알림, 통계, 제안은 일반적인 정보일 뿐 의학적 조언이 아닙니다. 필요한 수분량은 건강 상태, 활동량, 기후에 따라 다릅니다. 질환(예: 신장 질환, 심장 질환)이 있거나 의사로부터 수분 섭취를 제한하라는 말을 들었다면 앱보다 의사의 조언을 따르세요.</p>
+    <h3>3. Sippet Premium</h3>
+    <p>Sippet Premium은 선택 사항입니다. 현재 광고를 제거하고 30일 통계, 색상 테마, '내 컵', CSV 내보내기를 추가합니다. 그 밖의 앱 기능은 모두 무료로 유지됩니다.</p>
+    <ul>
+      <li><strong>결제.</strong> Premium은 Google Play를 통해 판매됩니다. Google Play가 자체 약관에 따라 결제를 처리하며, 앱에 표시되는 가격은 Google Play에서 제공하는 가격으로 해당되는 경우 현지 세금이 포함됩니다.</li>
+      <li><strong>일회성 구매(평생).</strong> 한 번 결제하면 앱이 Google Play에서 제공되는 동안 구매에 사용한 Google 계정에서 Premium을 계속 사용할 수 있습니다.</li>
+      <li><strong>연간 구독.</strong> 매년 자동으로 갱신되며 취소할 때까지 매년 초에 요금이 청구됩니다. 언제든지 Google Play → 결제 및 정기 결제 → 정기 결제에서 취소할 수 있습니다. 취소 후에도 이미 결제한 연도가 끝날 때까지 Premium이 유지됩니다. 앱을 삭제해도 구독은 취소되지 않습니다.</li>
+      <li><strong>가격 변경.</strong> 구독 가격이 변경되면 Google Play가 미리 알려 드리며, 필요한 경우 새 가격으로 청구하기 전에 동의를 요청합니다.</li>
+      <li><strong>환불.</strong> 환불은 <a href="https://support.google.com/googleplay/answer/2479637?hl=ko">Google Play 환불 정책</a>에 따라 Google Play가 처리합니다. 이 약관은 거주 국가의 법률에 따른 환불 또는 청약 철회 권리를 제한하지 않습니다.</li>
+      <li><strong>복원.</strong> 앱을 다시 설치하거나 휴대전화를 바꾼 경우 같은 Google 계정으로 로그인한 후 Premium 화면에서 '구매 복원'을 탭하세요.</li>
+      <li><strong>Premium 변경.</strong> 당사는 Premium 기능을 개선하거나 변경할 수 있습니다. 현재 기능은 항상 앱의 Premium 화면에 설명되어 있습니다.</li>
+    </ul>
+    <h3>4. 광고</h3>
+    <p>Premium이 없으면 앱에 Google AdMob의 배너 광고가 표시됩니다. 광고는 제3자가 제공하며, 당사는 광고되는 제품이나 웹사이트에 대해 책임지지 않습니다. 광고 데이터 처리 방식은 <a href="../privacy/">개인정보처리방침</a>에 설명되어 있습니다.</p>
+    <h3>5. 사용자 데이터</h3>
+    <p>음료 기록과 설정은 사용자의 기기에 저장됩니다. 중요한 데이터라면 직접 사본을 보관해야 합니다(예: CSV 내보내기 또는 Android 백업). 앱을 삭제하거나 휴대전화를 분실하면 백업하지 않은 데이터는 사라집니다. 자세한 내용은 <a href="../privacy/">개인정보처리방침</a>을 참고하세요.</p>
+    <h3>6. 올바른 사용</h3>
+    <p>앱을 오용하지 마세요. 결제 없이 Premium을 얻으려 하거나, 기능이나 제한을 우회하거나, 법률이 허용하는 경우를 제외하고 앱을 복제, 수정, 재판매 또는 재배포해서는 안 됩니다.</p>
+    <h3>7. 소유권</h3>
+    <p>앱과 그 이름, 디자인, 콘텐츠는 DinhTruong의 소유입니다. 이 약관은 본인 기기에서 앱을 사용할 수 있는 개인적이고 양도할 수 없는 권리를 부여할 뿐, 어떠한 소유권도 이전하지 않습니다.</p>
+    <h3>8. 보증 없음</h3>
+    <p>당사는 Sippet이 안정적으로 작동하도록 노력하지만, 앱은 '있는 그대로' 제공됩니다. 앱이 항상 사용 가능하거나 오류가 없다는 점, 또는 알림이 항상 제시간에 도착한다는 점을 보장하지 않습니다(예: 배터리 절약 모드에서는 Android가 알림을 지연하거나 차단할 수 있음).</p>
+    <h3>9. 책임의 제한</h3>
+    <p>법률이 허용하는 범위에서 당사는 앱 사용으로 발생하는 간접적 또는 결과적 손해나 데이터 손실에 대해 책임지지 않습니다. 당사에 책임이 인정되는 경우, 당사의 총 책임은 청구 전 12개월 동안 사용자가 Premium에 지불한 금액으로 제한됩니다. 이 약관은 법률상 배제할 수 없는 책임을 배제하거나 소비자로서의 권리를 제한하지 않습니다.</p>
+    <h3>10. 이용 종료</h3>
+    <p>앱을 삭제하면 언제든지 이용을 중단할 수 있습니다(구독은 Google Play에서 별도로 취소해야 합니다). 당사는 앱 제공을 중단할 수 있으며, 이 경우 유효한 연간 구독은 다시 청구되지 않도록 Google Play에서 취소됩니다.</p>
+    <h3>11. 약관 변경</h3>
+    <p>당사는 이 약관을 업데이트할 수 있습니다. 새 버전은 새 시행일과 함께 이 페이지에 게시됩니다. 그 이후에도 앱을 계속 사용하면 새 약관이 적용됩니다.</p>
+    <h3>12. 준거법</h3>
+    <p>이 약관은 베트남 법률을 따르며, 사용자가 거주하는 국가의 강행 법규가 부여하는 보호를 박탈하지 않습니다.</p>
+    <h3>13. 문의</h3>
+    <p>이 약관에 관한 문의: ndsoftwr@gmail.com.</p>
+  </section>
+
+  <section lang="ja" data-title="Sippet – 利用規約">
+    <h1>Sippet – 利用規約</h1>
+    <p class="muted">施行日：2026-10-26 · 開発者：DinhTruong · お問い合わせ：ndsoftwr@gmail.com · <a href="../privacy/">プライバシーポリシー</a></p>
+    <p class="muted">この翻訳は参考用です。内容に相違がある場合は英語版が優先されます。</p>
+    <p>本規約は、DinhTruong（以下「当方」）が提供する Sippet（以下「本アプリ」）をダウンロードまたは使用する際に適用されます。本アプリを使用することで、本規約に同意したものとみなされます。同意しない場合は、本アプリを使用しないでください。</p>
+    <h3>1. Sippet について</h3>
+    <p>Sippet は、飲んだものを記録し、水を飲むタイミングをお知らせするアプリです。本アプリの主な機能は無料です。当方は、本アプリの一部を随時更新、変更、または終了することがあります。</p>
+    <h3>2. 医学的助言ではありません</h3>
+    <p>Sippet は習慣を記録するアプリであり、医療機器や医療アプリではありません。目標、リマインダー、統計、提案は一般的な情報であり、医学的な助言ではありません。必要な水分量は、健康状態、活動量、気候によって異なります。持病（腎臓病や心臓病など）がある場合や、医師から水分を制限するよう指示されている場合は、本アプリではなく医師の指示に従ってください。</p>
+    <h3>3. Sippet Premium</h3>
+    <p>Sippet Premium は任意です。現在、広告の非表示に加え、30日間の統計、カラーテーマ、「マイカップ」、CSV の書き出しが利用できます。本アプリのその他の機能はすべて無料のままです。</p>
+    <ul>
+      <li><strong>支払い。</strong>Premium は Google Play を通じて販売されます。支払いは Google Play が独自の規約に基づいて処理し、アプリ内に表示される価格は Google Play から提供されるもので、該当する場合は現地の税金が含まれます。</li>
+      <li><strong>買い切り（永久）。</strong>一度お支払いいただくと、本アプリが Google Play で提供されている限り、購入に使用した Google アカウントで Premium を引き続きご利用いただけます。</li>
+      <li><strong>年間サブスクリプション。</strong>毎年自動で更新され、解約するまで毎年の開始時に料金が請求されます。解約は Google Play → お支払いと定期購入 → 定期購入 からいつでも行えます。解約後も、お支払い済みの年の終わりまで Premium をご利用いただけます。アプリをアンインストールしても定期購入は解約されません。</li>
+      <li><strong>価格の変更。</strong>サブスクリプションの価格が変更される場合、Google Play から事前にお知らせし、必要な場合は新しい価格で請求する前に同意を求めます。</li>
+      <li><strong>返金。</strong>返金は <a href="https://support.google.com/googleplay/answer/2479637?hl=ja">Google Play の返金ポリシー</a> に基づき Google Play が対応します。本規約は、お住まいの国の法律で認められている返金や撤回の権利を制限するものではありません。</li>
+      <li><strong>復元。</strong>アプリを再インストールした場合や機種を変更した場合は、同じ Google アカウントでログインし、Premium 画面で「購入を復元」をタップしてください。</li>
+      <li><strong>Premium の変更。</strong>当方は Premium の機能を改善または変更することがあります。現在の機能は、常にアプリ内の Premium 画面に記載しています。</li>
+    </ul>
+    <h3>4. 広告</h3>
+    <p>Premium をご利用でない場合、本アプリには Google AdMob のバナー広告が表示されます。広告は第三者によって提供されるもので、当方は広告される商品やウェブサイトについて責任を負いません。広告データの取り扱いについては<a href="../privacy/">プライバシーポリシー</a>をご覧ください。</p>
+    <h3>5. あなたのデータ</h3>
+    <p>飲み物の記録と設定は、あなたの端末に保存されます。大切なデータであれば、ご自身でコピーを保管してください（CSV の書き出しや Android のバックアップなど）。アプリをアンインストールしたり端末を紛失したりすると、バックアップしていないデータは失われます。詳しくは<a href="../privacy/">プライバシーポリシー</a>をご覧ください。</p>
+    <h3>6. 適切な利用</h3>
+    <p>本アプリを不正に利用しないでください。支払いをせずに Premium を入手しようとしたり、機能や制限を回避したり、法律で認められる場合を除き本アプリを複製、改変、再販売、再配布したりしないでください。</p>
+    <h3>7. 権利の帰属</h3>
+    <p>本アプリ、その名称、デザイン、コンテンツは DinhTruong に帰属します。本規約は、ご自身の端末で本アプリを使用するための個人的かつ譲渡不可の権利を付与するものであり、いかなる所有権も移転するものではありません。</p>
+    <h3>8. 無保証</h3>
+    <p>当方は Sippet が安定して動作するよう努めていますが、本アプリは「現状のまま」提供されます。本アプリが常に利用可能であること、エラーがないこと、リマインダーが常に時間どおりに届くことは保証しません（バッテリーセーバーなどで Android が通知を遅らせたりブロックしたりすることがあります）。</p>
+    <h3>9. 責任の制限</h3>
+    <p>法律で認められる範囲において、当方は本アプリの使用によって生じた間接的または派生的な損害、およびデータの損失について責任を負いません。当方が責任を負うと判断された場合でも、当方の責任の総額は、請求前の12か月間にあなたが Premium に支払った金額を上限とします。本規約は、法律上除外できない責任を除外するものではなく、消費者としてのあなたの権利を制限するものでもありません。</p>
+    <h3>10. 利用の終了</h3>
+    <p>本アプリはアンインストールすることでいつでも利用を終了できます（定期購入は Google Play で別途解約してください）。当方は本アプリの提供を終了することがあります。その場合、有効な年間サブスクリプションは再度請求されないよう Google Play で解約されます。</p>
+    <h3>11. 本規約の変更</h3>
+    <p>当方は本規約を更新することがあります。新しい版は新しい施行日とともにこのページに掲載します。その後も本アプリを使用し続けた場合、新しい規約が適用されます。</p>
+    <h3>12. 準拠法</h3>
+    <p>本規約はベトナム法に準拠します。ただし、お住まいの国の強行法規によって与えられる保護を奪うものではありません。</p>
+    <h3>13. お問い合わせ</h3>
+    <p>本規約に関するお問い合わせ：ndsoftwr@gmail.com</p>
+  </section>
+
+  <div class="bar" id="bar" hidden>
+    <label for="lang" class="muted">Language</label>
+    <select id="lang">
+      <option value="en">English</option>
+      <option value="vi">Tiếng Việt</option>
+      <option value="zh">简体中文</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <option value="ko">한국어</option>
+      <option value="ja">日本語</option>
+    </select>
+  </div>
 </main>
+<script>
+  // Shows one language: ?lang= (the app passes its language) or English. Without JavaScript every section shows.
+  const sections = [...document.querySelectorAll('section[lang]')];
+  const code = s => s.lang.split('-')[0];
+  const select = document.getElementById('lang');
+  function show(lang) {
+    sections.forEach(s => s.hidden = code(s) !== lang);
+    const current = sections.find(s => code(s) === lang);
+    document.documentElement.lang = current.lang;
+    document.title = current.dataset.title;
+    select.value = lang;
+    document.querySelectorAll('a[href^="../"]').forEach(a => a.setAttribute('href', a.getAttribute('href').split('?')[0] + '?lang=' + lang));
+    history.replaceState(null, '', '?lang=' + lang);
+  }
+  const wanted = (new URLSearchParams(location.search).get('lang') || '').toLowerCase().split(/[-_]/)[0];
+  select.onchange = () => show(select.value);
+  document.getElementById('bar').hidden = false;
+  show(sections.some(s => code(s) === wanted) ? wanted : 'en');
+</script>
 </body>
 </html>
